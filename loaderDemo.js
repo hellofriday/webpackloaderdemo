@@ -6,6 +6,7 @@ module.exports = async function(source) {
   let filePath = result[2] // 获取需要插入的文件路径 需要把它处理成绝对路径
   const request = loaderUtils.urlToRequest(filePath)
   const url = await resolvePath(this, path.resolve(__dirname, 'src'), request)
+  this.addDependency(url)
   const res = await readFile(url, {encoding: "utf8"})
   return source.replace(result[0], res)
 }
