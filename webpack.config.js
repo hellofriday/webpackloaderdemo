@@ -13,6 +13,7 @@ module.exports = {
       {
         test: /\.html$/,
         use: [
+          'html-loader',
           {
             loader: 'loader-demo',
             options: {
@@ -21,8 +22,6 @@ module.exports = {
           }
         ]
       },
-      
-      'html-loader',
       // less 处理
       {
         test: /\.less$/,
