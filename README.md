@@ -1,4 +1,1 @@
-这个项目实现的功能：
-1、babel 将es6语法转为es5
-2、支持less、css
-3、file-loader对图片、字体、多媒体文件进行处理
+这个loader作用是可以往index.html文件里面插入一段js代码，本质上就是webpack 会把html内容以字符串的形式传过来，用正则找到tag，添加一些字符串
